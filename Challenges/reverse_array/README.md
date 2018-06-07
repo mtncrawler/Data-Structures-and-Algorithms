@@ -2,6 +2,6 @@
 
 ## Summary of the Challenge
 
-##Image
+## Image
 
 ## Explanation
