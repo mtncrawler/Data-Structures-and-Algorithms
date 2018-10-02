@@ -2,9 +2,14 @@
 
 ## Table of Contents
 
-1.[Challenge 1]()
-1.[Challenge 2]()
-1.[Challenge 3]()
-1.[Challenge 4]()
-1.[Challenge 5]()
-1.[Challenge 6]()
+1. [Reverse an array](#)
+
+2. [Challenge 2](#)
+
+3. [Challenge 3](#)
+
+4. [Challenge 4](#)
+
+5. [Challenge 5](#)
+
+6. [Challenge 6](#)
