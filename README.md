@@ -4,7 +4,7 @@
 
 1. [Reverse an array](Challenges/reverseArray)
 
-2. [Challenge 2](#)
+2. [Insert and shift an array](Challenges/arrayShift)
 
 3. [Challenge 3](#)
 
