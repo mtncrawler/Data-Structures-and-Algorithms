@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. [Reverse an array](#)
+1. [Reverse an array](Challenges/reverseArray)
 
 2. [Challenge 2](#)
 
