@@ -14,4 +14,4 @@ new value added at the middle index.
 
 ## Solution
 
-![Reverse An Array](../../assets/Challenge1.PNG)
+![Whiteboard]()

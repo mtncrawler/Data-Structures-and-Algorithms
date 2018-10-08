@@ -17,4 +17,5 @@ Two approaches were taken for this code challenge:
 
 ## Solution
 
-![Whiteboard Image]()
+![Reverse An Array](../../assets/Challenge1.PNG)
+
