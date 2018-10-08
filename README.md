@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-1. [Challenge 1: Reverse an array](Challenges/reverseArray)
+1. [Challenge: Reverse an array](Challenges/reverseArray)
 
-2. [Challenge 2: Insert and shift an array](Challenges/arrayShift)
+2. [Challenge: Insert and shift an array](Challenges/arrayShift)
 
-3. [Challenge 3: Array Binary Search](Challenges/BinarySearch)
+3. [Challenge: Array Binary Search](Challenges/BinarySearch)
 
 4. [Implementation: Linked List](#)
 
