@@ -1,5 +1,7 @@
 # Reverse an Array
 
+Used as example/template for challenges. Code and repo from Amanda Iverson.
+
 ## Challenge
 Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available 
 to your language, return the provided array argument with elements in reversed order.
