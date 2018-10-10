@@ -1,8 +1,8 @@
 # Insert and Shift an Array
 
 ## Challenge
-Write a method that will take in an array of integers and an integer value and insert the value in the middle index of the array.
-If the array length is odd then round up for the middle index.
+Write a method that will take in an array of integers and an integer value then insert the value in the middle index of the array.
+If the array length is odd then round up for the middle index. Return the new array.
 
 ## Approach & Efficiency
 
