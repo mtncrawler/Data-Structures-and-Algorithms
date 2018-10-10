@@ -1,17 +1,15 @@
 # Insert and Shift an Array
 
 ## Challenge
-Write a method called insertShiftArray which takes in an array and the value to be added. 
-Without utilizing any of the built-in methods available to your language, return an array with the 
-new value added at the middle index. 
+Write a method that will take in an array of integers and an integer value and insert the value in the middle index of the array.
+If the array length is odd then round up for the middle index.
 
 ## Approach & Efficiency
 
-1. Big O Time = O(n) // Big O Space = O(n)
-	- Both the time and the space of this algorithm is O(n). Within the algorithm executed within the challenge
-	one of the restraints that we have in the C# language is that we have fixed size arrays. This requires
-	any changes to the array to result in a brand new array being instantiated. 
+1.	Big-O Time = O(n) 
+	Big-O Space = O(n)
+The Big-O for time and space is O(n) because the algorithm only needs to run n times and the arrays are a fixed length. 
 
 ## Solution
 
-![Whiteboard](assets/)
+![Whiteboard](assets/challenge2.png)
