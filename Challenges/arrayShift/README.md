@@ -12,4 +12,4 @@ The Big-O for time and space is O(n) because the algorithm only needs to run n t
 
 ## Solution
 
-![Whiteboard](../../assets/Challenge1.PNG)
+![Whiteboard](../../assets/Challenge2.PNG)
