@@ -14,4 +14,4 @@ new value added at the middle index.
 
 ## Solution
 
-![Whiteboard]()
+![Whiteboard](assets/)
