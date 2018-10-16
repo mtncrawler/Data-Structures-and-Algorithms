@@ -4,7 +4,7 @@ using System.Text;
 
 namespace linkedList.classes
 {
-    class LinkedList
+    public class LinkedList
     {
         /// <summary>
         /// Always points to the first node in the LL
@@ -26,15 +26,6 @@ namespace linkedList.classes
             Current = node;
         }
 
-        /// <summary>
-        /// add a node at the beginning of linked list
-        /// </summary>
-        public void Add(Node node)
-        {
-            node.Next = Head;
-            Head = node;
-            Current = Head;
-        }
 
         /// <summary>
         /// Traverse list in order to print
@@ -49,6 +40,16 @@ namespace linkedList.classes
             }
 
             Console.WriteLine($"{Current.Value} --> null");
+            Current = Head;
+        }
+
+        /// <summary>
+        /// add a node at the beginning of linked list
+        /// </summary>
+        public void Add(Node node)
+        {
+            node.Next = Head;
+            Head = node;
             Current = Head;
         }
 
