@@ -24,7 +24,7 @@ namespace linkedList
             myAwesomeList.Add(node4);
 
 
-            myAwesomeList.AddBefore(node6, node3);
+            myAwesomeList.AddAfter(node6, node3);
 
             myAwesomeList.Print();
 

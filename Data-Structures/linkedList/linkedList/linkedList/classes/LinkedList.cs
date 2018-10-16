@@ -27,7 +27,7 @@ namespace linkedList.classes
         }
 
         /// <summary>
-        /// add a node at the beginning
+        /// add a node at the beginning of linked list
         /// </summary>
         public void Add(Node node)
         {
@@ -121,34 +121,6 @@ namespace linkedList.classes
             }
 
             Current = Head;
-        }
-
-
-        /// <summary>
-        /// Check if a value is found in a linked list
-        /// </summary>
-        /// <param name="value">target value</param>
-        /// <returns>true if value is found</returns>
-        public bool Includes(object value)
-        {
-            Current = Head;
-            if (Head.Value == value)
-            {
-                return true;
-            }
-
-            while (Current.Value != value)
-            {
-                if (Current.Value == value)
-                {
-                    return true;
-                }
-
-                Current = Current.Next;
-            }
-
-            Current = Head;
-            return false;
         }
     }
 }
