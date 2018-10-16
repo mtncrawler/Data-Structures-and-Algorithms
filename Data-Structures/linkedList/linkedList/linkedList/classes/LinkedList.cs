@@ -69,9 +69,10 @@ namespace linkedList.classes
         }
 
         /// <summary>
-        /// 
+        /// add a node before a node
         /// </summary>
         /// <param name="newNode"></param>
+        /// <param name="existingNode"></param>
         public void AddBefore(Node newNode, Node existingNode)
         {
             Current = Head;
@@ -93,6 +94,11 @@ namespace linkedList.classes
             Current = Head;
         }
 
+        /// <summary>
+        /// add a node after a specific node
+        /// </summary>
+        /// <param name="newNode"></param>
+        /// <param name="existingNode"></param>
         public void AddAfter(Node newNode, Node existingNode)
         {
             Current = Head;
@@ -103,17 +109,18 @@ namespace linkedList.classes
                 return;
             }
 
-            //while (Current.Next != null)
-            //{
-            //    if (Current.Next.Value == existingNode.Value)
-            //    {
-            //        existingNode.Next = newNode.Next;
-            //        Current.Next = newNode;
-            //        return;
-            //    }
-            //}
+            while (Current.Next != null)
+            {
+                if (Current.Value == existingNode.Value)
+                {
+                    newNode.Next = Current.Next;
+                    Current.Next = newNode;
+                    return;
+                }
+                Current = Current.Next;
+            }
+
             Current = Head;
-            return;
         }
 
 
