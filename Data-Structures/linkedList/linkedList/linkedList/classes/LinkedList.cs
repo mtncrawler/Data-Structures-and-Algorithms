@@ -9,19 +9,13 @@ namespace linkedList.classes
         /// <summary>
         /// Always points to the first node in the LL
         /// </summary>
-        public Node Head
-        {
-            get; set;
-        }
-
+        public Node Head { get; set; }
+        
         /// <summary>
         /// Node that is used to traverse through the LL
         /// </summary>
-        public Node Current
-        {
-            get; set;
-        }
-
+        public Node Current { get; set; }
+        
         /// <summary>
         /// LL requires a node at time of creation to be the HEAD
         /// </summary>
@@ -59,7 +53,7 @@ namespace linkedList.classes
         }
 
         /// <summary>
-        /// 
+        /// Appends a node to the end of the linked list
         /// </summary>
         /// <param name="node"></param>
         public void Append(Node newNode)
@@ -97,6 +91,57 @@ namespace linkedList.classes
             }
 
             Current = Head;
+        }
+
+        public void AddAfter(Node newNode, Node existingNode)
+        {
+            Current = Head;
+            if (Head.Value == existingNode.Value)
+            {
+                newNode.Next = Current.Next;
+                Current.Next = newNode;
+                return;
+            }
+
+            //while (Current.Next != null)
+            //{
+            //    if (Current.Next.Value == existingNode.Value)
+            //    {
+            //        existingNode.Next = newNode.Next;
+            //        Current.Next = newNode;
+            //        return;
+            //    }
+            //}
+            Current = Head;
+            return;
+        }
+
+
+        /// <summary>
+        /// Check if a value is found in a linked list
+        /// </summary>
+        /// <param name="value">target value</param>
+        /// <returns>true if value is found</returns>
+        public bool Includes(object value)
+        {
+            Current = Head;
+            if (Head.Value == value)
+            {
+                return true;
+            }
+
+            while (Current.Value != value)
+            {
+                if (Current.Value == value)
+                {
+                    return true;
+                }
+
+                Current = Current.Next;
+            }
+
+            Current = Head;
+            return false;
         }
     }
 }
