@@ -3,9 +3,9 @@ using System;
 
 namespace findKthValue
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
 
@@ -23,9 +23,39 @@ namespace findKthValue
 
             testList.Print();
 
+            Console.WriteLine(FindKthValue(testList, 3));
+            
+        }
 
+        public static object FindKthValue(LinkedList testList, int k)
+        {
+            if( k < 0)
+            {
+                return "Exception: Please enter a non-negative number.";
+            }
 
+            testList.Current = testList.Head;
+            int counter = 0;
 
+            while (testList.Current.Next != null)
+            {
+                testList.Current = testList.Current.Next;
+                counter++;
+            }
+
+            if ( k > counter )
+            {
+                return "Exception: Invalid k value.";
+            }
+
+            testList.Current = testList.Head;
+            while (counter > k)
+            {
+                testList.Current = testList.Current.Next;
+                counter--;
+            }
+
+            return testList.Current.Value;
         }
     }
 }
