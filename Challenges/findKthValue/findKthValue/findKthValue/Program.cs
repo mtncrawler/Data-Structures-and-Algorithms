@@ -27,6 +27,12 @@ namespace findKthValue
             
         }
 
+        /// <summary>
+        /// method to find the node value of the kth node from the end of the linked list 
+        /// </summary>
+        /// <param name="testList"></param>
+        /// <param name="k"></param>
+        /// <returns>node value</returns>
         public static object FindKthValue(LinkedList testList, int k)
         {
             if( k < 0)

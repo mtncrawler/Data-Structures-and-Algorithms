@@ -7,6 +7,11 @@ namespace findKthValueTest
 {
     public class UnitTest1
     {
+        /// <summary>
+        /// test for edge cases and correct node value returned
+        /// </summary>
+        /// <param name="k"></param>
+        /// <param name="expected"></param>
         [Theory]
         [InlineData(-2, "Exception: Please enter a non-negative number.")]
         [InlineData(3, "friyah")]
