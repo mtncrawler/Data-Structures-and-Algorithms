@@ -8,8 +8,8 @@
 
 3. [Challenge 3: Array Binary Search](Challenges/binarySearch)
 
-4. [Implementation: Linked List](#)
+4. [Implementation: Linked List](Data-Structures/linkedList)
 
-5. [Challenge 5](#)
+5. [Challenge 5](Challenges/findKthValue)
 
 6. [Challenge 6](#)
