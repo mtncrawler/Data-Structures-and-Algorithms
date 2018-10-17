@@ -10,6 +10,6 @@
 
 4. [Implementation: Linked List](Data-Structures/linkedList)
 
-5. [Challenge 5](Challenges/findKthValue)
+5. [Challenge 5: Find the kth value](Challenges/findKthValue)
 
 6. [Challenge 6](#)
