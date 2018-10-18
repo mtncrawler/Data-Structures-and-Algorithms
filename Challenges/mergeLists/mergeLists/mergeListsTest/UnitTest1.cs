@@ -22,9 +22,7 @@ namespace mergeListsTest
             expected.Add(new Node(4));
             expected.Add(new Node(1));
 
-            LinkedList actual = Program.MergeLists(one, two);
-
-            Assert.True(expected == actual);
+            Assert.Equal("1 -->4 -->2 -->3 --> null", Program.MergeLists(one, two).Print());
         }
     }
 }
