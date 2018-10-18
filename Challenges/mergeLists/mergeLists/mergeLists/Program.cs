@@ -25,13 +25,7 @@ namespace mergeLists
             
             MergeLists(one, two).Print();
 
-            //LinkedList expected = new LinkedList(node6);
-            //expected.Add(node5);
-            //expected.Add(node3);
-            //expected.Add(node4);
-            //expected.Add(node2);
-
-            //expected.Print();
+           
 
         }
 
@@ -68,6 +62,16 @@ namespace mergeLists
             }
 
             return one;
+        }
+
+        public string Print(LinkedList list)
+        {
+            list.Current = list.Head;
+
+            while (Current.Next !=null)
+            {
+
+            }
         }
     }
 }
