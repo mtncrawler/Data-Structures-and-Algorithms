@@ -35,11 +35,12 @@ namespace linkedList.classes
             Current = Head;
             while (Current.Next != null)
             {
-                Console.WriteLine($"{Current.Value} -->");
+                Console.Write($"{Current.Value} -->");
                 Current = Current.Next;
             }
 
-            Console.WriteLine($"{Current.Value} --> null");
+            Console.Write($"{Current.Value} --> null");
+            Console.WriteLine();
             Current = Head;
         }
 
