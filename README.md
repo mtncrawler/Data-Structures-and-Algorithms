@@ -12,4 +12,4 @@
 
 5. [Challenge 5: Find the kth value](Challenges/findKthValue)
 
-6. [Challenge 6](#)
+6. [Challenge 6: Merge Linked Lists](Challenges/mergeLists)
