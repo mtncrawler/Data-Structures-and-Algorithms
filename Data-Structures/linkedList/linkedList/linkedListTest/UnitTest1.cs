@@ -23,26 +23,26 @@ namespace linkedListTest
             Assert.Equal(testValue, testList.Head.Value);
         }
 
-        //[Theory]
-        //[InlineData(99)]
-        //[InlineData(true)]
-        //[InlineData("georgia")]
-        //public void AddsNodeToEnd(object testValue)
-        //{
-        //    Node node1 = new Node("bird");
-        //    Node node2 = new Node(false);
-        //    Node node3 = new Node(testValue);
-        //    LinkedList testList = new LinkedList(node1);
-        //    testList.Add(node2);
-        //    testList.Append(node3);
-            
-        //    while (testList.Current.Next != null)
-        //    {
-                
-        //    }
+        [Theory]
+        [InlineData(99)]
+        [InlineData(true)]
+        [InlineData("georgia")]
+        public void AddsNodeToEnd(object testValue)
+        {
+            Node node1 = new Node("bird");
+            Node node2 = new Node(false);
+            Node node3 = new Node(testValue);
+            LinkedList testList = new LinkedList(node1);
+            testList.Add(node2);
+            testList.Append(node3);
 
-        //     Assert.Equal(testValue, );
-        //}
+            while (testList.Current.Next != null)
+            {
+                testList.Current = testList.Current.Next;
+            }
+
+            Assert.Equal(testValue, testList.Current.Value);
+        }
 
         [Theory]
         [InlineData(99)]
