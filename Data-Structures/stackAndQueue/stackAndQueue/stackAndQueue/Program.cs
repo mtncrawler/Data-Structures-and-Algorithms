@@ -41,7 +41,6 @@ namespace stackAndQueue
             myQueue.Dequeue();
             Console.WriteLine($"{myQueue.Peek().Value}");
             myQueue.Dequeue();
-
         }
     }
 }
