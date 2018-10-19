@@ -4,7 +4,7 @@ using System.Text;
 
 namespace stackAndQueue.classes
 {
-    class Stack
+    public class Stack
     {
         public Node Top { get; set; }
 
@@ -20,8 +20,16 @@ namespace stackAndQueue.classes
 
         public Node Pop()
         {
-            Node temp = Top.Next;
+            Node temp = Top;
             Top = Top.Next;
+            temp.Next = null;
+            return temp;
+        }
+
+        public void Push(Node node)
+        {
+            node.Next = Top;
+            Top = node;
         }
     }
 }
