@@ -14,4 +14,4 @@
 
 6. [Challenge 6: Merge Linked Lists](Challenges/mergeLists)
 
-7. [Implementation: Stack and Queue](Data-Structures/Stack And Queue)
+7. [Implementation: Stack and Queue](Data-Structures/Stack%And%Queue)
