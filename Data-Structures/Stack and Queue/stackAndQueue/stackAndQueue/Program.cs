@@ -20,6 +20,10 @@ namespace stackAndQueue
             myStack.Push(node2);
             myStack.Push(node3);
 
+            Queue myQueue = new Queue(node4);
+            myQueue.Enqueue(node5);
+            myQueue.Enqueue(node6);
+
 
         }
     }
