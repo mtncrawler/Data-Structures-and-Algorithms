@@ -16,4 +16,4 @@
 
 7. [Implementation: Stack and Queue](Data-Structures/stackAndQueue)
 
-8. [Implementation: Linked List Palindrome] (Challenges/linkedListPalindrome)
+8. [Implementation: Linked List Palindrome](Challenges/linkedListPalindrome)
