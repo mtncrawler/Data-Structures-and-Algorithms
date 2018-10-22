@@ -15,3 +15,5 @@
 6. [Challenge 6: Merge Linked Lists](Challenges/mergeLists)
 
 7. [Implementation: Stack and Queue](Data-Structures/stackAndQueue)
+
+8. [Implementation: Linked List Palindrome] (Challenges/linkedListPalindrome)
