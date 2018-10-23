@@ -10,10 +10,15 @@ namespace queueWithStacks.classes
         public Stack stack1 = new Stack(null);
         public Stack stack2 = new Stack(null);
 
+        public Node Front { get; set; }
+        public Node Rear { get; set; }
+
         public QueueWithStacks(Node node)
         {
             stack1 = new Stack(node);
             stack2 = new Stack(node);
+            Front = node;
+            Rear = node;
         }
 
         /// <summary>
@@ -31,17 +36,14 @@ namespace queueWithStacks.classes
         /// <returns>node that is removed</returns>
         public Node Dequeue()
         {
-            if (stack2.Pop() == null )
-            {
-                while (stack1.Pop() == null)
+            while (stack1.Top != null)
                 {
                     stack2.Push(stack1.Pop());
                 }
-            }
 
             Node temp = stack2.Pop();
 
-            while (stack2.Pop() == null)
+            while (stack2.Top != null)
             {
                 stack1.Push(stack2.Pop());
             }
