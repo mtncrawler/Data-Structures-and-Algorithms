@@ -4,7 +4,7 @@ using System.Text;
 
 namespace fifoAnimalShelter.Classes
 {
-    class AnimalShelter
+    public class AnimalShelter
     {
         public Animal Front { get; set; }
 
@@ -24,15 +24,42 @@ namespace fifoAnimalShelter.Classes
         {
             Rear.Next = animal;
             Rear = animal;
-        } 
+        }
 
-        public Animal Dequeue()
+        /// <summary>
+        /// remove the animal that was put into the shelter first
+        /// </summary>
+        /// <param name="preference">specifies dog or cat to remove</param>
+        /// <returns>removed animal</returns>
+        public Animal Dequeue(string preference)
         {
+            if (preference.ToLower() != "dog" || preference.ToLower() != "cat")
+            {
                 Animal temp = Front;
                 Front = Front.Next;
                 temp.Next = null;
-
                 return temp;
+            }
+
+            while (Front != null)
+            {
+                Animal temp = Front;
+                
+                if (temp.Type == preference)
+                {
+                    Front = Front.Next;
+                    temp.Next = null;
+                    return temp;
+                }
+                else
+                {
+                    Front = Front.Next;
+                    temp.Next = null;
+                    Enqueque(temp);
+                }
+            }
+
+            return Front;
         }
     }
 }

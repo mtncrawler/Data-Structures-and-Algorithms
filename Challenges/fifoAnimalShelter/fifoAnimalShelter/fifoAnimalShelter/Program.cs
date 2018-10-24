@@ -20,7 +20,7 @@ namespace fifoAnimalShelter
             Console.WriteLine(animalShelter.Front.Name);
             Console.WriteLine(animalShelter.Rear.Name);
 
-            animalShelter.Dequeue();
+            animalShelter.Dequeue("hippo");
             Console.WriteLine("===========");
             Console.WriteLine(animalShelter.Front.Name);
             Console.WriteLine(animalShelter.Rear.Name);
