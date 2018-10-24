@@ -18,6 +18,12 @@ namespace fifoAnimalShelter
             animalShelter.Enqueque(kittie);
 
             Console.WriteLine(animalShelter.Front.Name);
+            Console.WriteLine(animalShelter.Rear.Name);
+
+            animalShelter.Dequeue();
+            Console.WriteLine("===========");
+            Console.WriteLine(animalShelter.Front.Name);
+            Console.WriteLine(animalShelter.Rear.Name);
 
         }
     }
