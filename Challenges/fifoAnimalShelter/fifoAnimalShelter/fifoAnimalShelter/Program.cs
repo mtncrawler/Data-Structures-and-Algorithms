@@ -7,8 +7,13 @@ namespace fifoAnimalShelter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to the FIFO Shelter!");
 
+            FIFOAnimalShelter();
+        }
+
+        public static void FIFOAnimalShelter()
+        {
             Animal doggo = new Animal { Type = "dog", Name = "Bob" };
             Animal puppers = new Animal { Type = "dog", Name = "Roger" };
             Animal kittie = new Animal { Type = "cat", Name = "Zeus" };
@@ -17,13 +22,11 @@ namespace fifoAnimalShelter
             animalShelter.Enqueque(puppers);
             animalShelter.Enqueque(kittie);
 
-            Console.WriteLine(animalShelter.Front.Name);
-            Console.WriteLine(animalShelter.Rear.Name);
+            Console.WriteLine($"Please adopt {animalShelter.Front.Name}! This dog has been at the shelter the longest.");
 
-            animalShelter.Dequeue("hippo");
-            Console.WriteLine("===========");
-            Console.WriteLine(animalShelter.Front.Name);
-            Console.WriteLine(animalShelter.Rear.Name);
+            Console.WriteLine("=====CAT IS ADOPTED======");
+            Console.WriteLine($"Thank you for adopting {kittie.Name}, she is the cat that has been here the longest!");
+            animalShelter.Dequeue("cat");
 
         }
     }
