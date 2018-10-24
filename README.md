@@ -19,3 +19,5 @@
 8. [Implementation: Linked List Palindrome](Challenges/linkedListPalindrome)
 
 9. [Challenge: Queue with Stacks](Challenges/queueWithStacks)
+
+10. [Challenge: FIFO Animal Shelter](Challenges/fifoAnimalShelter)
