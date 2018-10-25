@@ -10,11 +10,11 @@ namespace multiBracketValidation
         {
             Console.WriteLine("Hello World!");
 
-            string test = "dog";
-            Console.WriteLine(test.Length);
-            
+            Console.WriteLine("()[[Extra Characters]]");
+            Console.WriteLine(MultiBracketValidation("()[[Extra Characters]]"));
 
-            Console.WriteLine(MultiBracketValidation("()[[Extra Characters]]")); 
+            Console.WriteLine("[({}]");
+            Console.WriteLine(MultiBracketValidation("[({}]"));
         }
 
         public static bool MultiBracketValidation(string input)
