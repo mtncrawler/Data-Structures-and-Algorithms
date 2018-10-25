@@ -7,9 +7,8 @@ namespace multiBracketValidationTest
     public class UnitTest1
     {
         [Theory]
-        [InlineData("{{{hello[[()]]}}}()[]")]
-       
-        //[InlineData()]
+        [InlineData("()[]")]
+        [InlineData("{}{Code}[Fellows](())")]
         public void TrueBalancedBrackets(string input)
         {
             Assert.True(Program.MultiBracketValidation(input));
@@ -17,7 +16,6 @@ namespace multiBracketValidationTest
 
         [Theory]
         [InlineData("[({((hi))}]")]
-        [InlineData("doowap")]
         public void FalseBalancedBrackets(string input)
         {
             Assert.False(Program.MultiBracketValidation(input));

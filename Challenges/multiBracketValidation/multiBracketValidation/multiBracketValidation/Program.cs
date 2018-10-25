@@ -23,7 +23,7 @@ namespace multiBracketValidation
             Stack<char> stack = new Stack<char>();
             char character;
 
-            if (inputArray[0] == ')' || inputArray[0] == ']' || inputArray[0] == '}')
+            if (inputArray[0] == ')' || inputArray[0] == ']' || inputArray[0] == '}' )
             {
                 return false;
             }
