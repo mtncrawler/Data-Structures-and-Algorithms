@@ -14,7 +14,7 @@ namespace multiBracketValidation
             Console.WriteLine(test.Length);
             
 
-            Console.WriteLine(MultiBracketValidation("[({}]")); 
+            Console.WriteLine(MultiBracketValidation("()[[Extra Characters]]")); 
         }
 
         public static bool MultiBracketValidation(string input)
@@ -41,14 +41,19 @@ namespace multiBracketValidation
                     case ')':
                         character = stack.Peek();
                         stack.Pop();
+                        if (character == '{' || character == '[') return false;
                         break;
+
                     case '}':
                         character = stack.Peek();
                         stack.Pop();
+                        if (character == '(' || character == '[') return false;
                         break;
+
                     case ']':
                         character = stack.Peek();
                         stack.Pop();
+                        if (character == '{' || character == '(') return false;
                         break;
                 }
             }
