@@ -1,4 +1,6 @@
-﻿using System;
+﻿using stackAndQueue.classes;
+using System;
+using System.Collections.Generic;
 
 namespace multiBracketValidation
 {
@@ -8,12 +10,50 @@ namespace multiBracketValidation
         {
             Console.WriteLine("Hello World!");
 
-            MultiBracketValidation();
+            string test = "dog";
+            Console.WriteLine(test.Length);
+            
+
+            Console.WriteLine(MultiBracketValidation("[({}]")); 
         }
 
-        public bool MultiBracketValidation(string input)
+        public static bool MultiBracketValidation(string input)
         {
+            char[] inputArray = input.ToCharArray();
+            Stack<char> stack = new Stack<char>();
+            char character;
 
+            if (inputArray[0] == ')' || inputArray[0] == ']' || inputArray[0] == '}')
+            {
+                return false;
+            }
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (inputArray[i] == '(' || inputArray[i] == '[' || inputArray[i] == '{')
+                {
+                    stack.Push(input[i]);
+                    continue;
+                }
+
+                switch (inputArray[i])
+                {
+                    case ')':
+                        character = stack.Peek();
+                        stack.Pop();
+                        break;
+                    case '}':
+                        character = stack.Peek();
+                        stack.Pop();
+                        break;
+                    case ']':
+                        character = stack.Peek();
+                        stack.Pop();
+                        break;
+                }
+            }
+
+            return true;
         }
     }
 }
