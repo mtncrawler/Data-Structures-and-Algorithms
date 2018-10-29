@@ -42,6 +42,11 @@ namespace trees.classes
                 previous.RightChild = add;
         }
 
+        /// <summary>
+        /// search tree to find a node
+        /// </summary>
+        /// <param name="findMe">Node being searched for</param>
+        /// <returns>Node that matches input in tree</returns>
         public Node Search(Node findMe)
         {
             Node current = Root;
