@@ -28,5 +28,38 @@ namespace trees.classes
 
             return output;
         }
+
+        public List<int> InOrder(Node node, List<int> output)
+        {
+            if (node.LeftChild != null)
+            {
+                InOrder(node.LeftChild, output);
+            }
+
+            output.Add(node.Value);
+
+            if (node.RightChild != null)
+            {
+                InOrder(node.RightChild, output);
+            }
+
+            return output;
+        }
+
+        public List<int> PostOrder(Node node, List<int> output)
+        {
+            if (node.LeftChild != null)
+            {
+                PostOrder(node.LeftChild, output);
+            }
+
+            if (node.RightChild != null)
+            {
+                PostOrder(node.RightChild, output);
+            }
+
+            output.Add(node.Value);
+            return output;
+        }
     }
 }

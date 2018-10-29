@@ -21,14 +21,31 @@ namespace trees
             n2.LeftChild = n4;
 
             List<int> output = new List<int>();
-            
-            foreach (var item in bt.PreOrder(n1, output))
+
+            //bt.PreOrder(n1, output);
+
+
+            //List<int> output1 = new List<int>();
+            //List<int> test2 = bt.InOrder(n1, output1);
+
+
+            //foreach (var item in test2)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            foreach (var item in bt.PostOrder(n1, output))
             {
                 Console.WriteLine(item);
             }
             
+        }
 
-            
+        public void Print(List<int> output)
+        {
+            foreach (var item in output)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
