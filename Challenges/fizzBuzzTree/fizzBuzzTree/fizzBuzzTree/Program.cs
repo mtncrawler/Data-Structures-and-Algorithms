@@ -1,4 +1,5 @@
-﻿using System;
+﻿using stackAndQueue.classes;
+using System;
 
 namespace fizzBuzzTree
 {
@@ -7,6 +8,13 @@ namespace fizzBuzzTree
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+
+        }
+
+        public void FizzBuzzTree(Node node)
+        {
+
         }
     }
 }
