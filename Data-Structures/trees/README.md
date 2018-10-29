@@ -17,12 +17,8 @@ Binary Tree:
 
 Binary Search Tree  
 
-1.	Add 
+1.	Add, Search  
 	time O(log n) - each traversal helps to eliminate the branches of the opposite direction of traversal   
-	space O(1) - there is no additional memory that is allocated  
-
-2.	Search
-	time O(log n) -  each traversal helps to eliminate the branches of the opposite direction of traversal  
 	space O(1) - there is no additional memory that is allocated  
 
 ## Methods
