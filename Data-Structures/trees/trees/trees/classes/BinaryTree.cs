@@ -13,6 +13,12 @@ namespace trees.classes
             Root = value;
         }
 
+        /// <summary>
+        /// depth first traversal - root, left, right
+        /// </summary>
+        /// <param name="node">root node</param>
+        /// <param name="output">node values in PreOrder traversal</param>
+        /// <returns></returns>
         public List<int> PreOrder(Node node, List<int> output)
         {
             output.Add(node.Value);
@@ -29,6 +35,12 @@ namespace trees.classes
             return output;
         }
 
+        /// <summary>
+        /// depth first traversal - left, root, right
+        /// </summary>
+        /// <param name="node">root node</param>
+        /// <param name="output">node values InOrder traversal</param>
+        /// <returns></returns>
         public List<int> InOrder(Node node, List<int> output)
         {
             if (node.LeftChild != null)
@@ -46,6 +58,12 @@ namespace trees.classes
             return output;
         }
 
+        /// <summary>
+        /// depth first traversal - left, right, root
+        /// </summary>
+        /// <param name="node">root node</param>
+        /// <param name="output">node values in PostOrder traversal</param>
+        /// <returns></returns>
         public List<int> PostOrder(Node node, List<int> output)
         {
             if (node.LeftChild != null)
