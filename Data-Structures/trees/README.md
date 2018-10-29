@@ -11,7 +11,7 @@ Create a BinarySearchTree class with a method named Add that adds a new node in 
 
 Binary Tree:
 
-1.	PreOrder, InOrder, PostOrder
+1.	PreOrder, InOrder, PostOrder  
 	time O(n) -  efficiency based on the maximum number of nodes needed to traverse the tree  
 	space O(H) -  efficiency based on the height of the call stack which is the height of the tree  
 
