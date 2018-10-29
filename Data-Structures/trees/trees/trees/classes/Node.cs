@@ -12,11 +12,9 @@ namespace trees.classes
 
         public Node RightChild { get; set; }
 
-        public Node (int value, Node leftChild, Node rightChild)
+        public Node (int value)
         {
             Value = value;
-            LeftChild = leftChild;
-            RightChild = rightChild;
         }
 
     }
