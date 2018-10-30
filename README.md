@@ -16,8 +16,18 @@
 
 7. [Implementation: Stack and Queue](Data-Structures/stackAndQueue)
 
-8. [Implementation: Linked List Palindrome](Challenges/linkedListPalindrome)
+8. [Challenge: Linked List Palindrome](Challenges/linkedListPalindrome)
 
 9. [Challenge: Queue with Stacks](Challenges/queueWithStacks)
 
 10. [Challenge: FIFO Animal Shelter](Challenges/fifoAnimalShelter)
+
+11. [Challenge: MultiBracket Validation](Challenges/multiBracketValidation)
+
+12. [Implementation: Binary Trees](Data-Structures/trees)
+
+13. [Challenge: FizzBuzzTree](Challenges/fizzBuzzTree)
+
+
+
+
