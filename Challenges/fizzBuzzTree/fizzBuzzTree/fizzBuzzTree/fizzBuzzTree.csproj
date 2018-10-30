@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="stackAndQueue">
-      <HintPath>..\..\..\..\Data-Structures\stackAndQueue\stackAndQueue\stackAndQueue\bin\Debug\netcoreapp2.1\stackAndQueue.dll</HintPath>
+    <Reference Include="trees">
+      <HintPath>..\..\..\..\Data-Structures\trees\trees\trees\bin\Debug\netcoreapp2.1\trees.dll</HintPath>
     </Reference>
   </ItemGroup>
 
