@@ -51,21 +51,20 @@ namespace trees.classes
         {
             Node current = Root;
 
-            if (current == null)
+            while (current != null)
             {
-                return null;
-            }
-            if (findMe.Value == current.Value)
-            {
-                return current;
-            }
-            if (findMe.Value < current.Value)
-            {
-                Search(current.LeftChild);
-            }
-            else if (findMe.Value > current.Value)
-            {
-                Search(current.RightChild);
+                if (findMe.Value == current.Value)
+                {
+                    return current;
+                }
+                else if (findMe.Value < current.Value)
+                {
+                    current = current.LeftChild;
+                }
+                else if (findMe.Value > current.Value)
+                {
+                    current = current.RightChild;
+                }
             }
 
             return null;

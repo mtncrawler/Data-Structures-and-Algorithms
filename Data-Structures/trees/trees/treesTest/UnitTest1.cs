@@ -63,5 +63,64 @@ namespace treesTest
 
             Assert.Equal(expected, bt.PostOrder(n1, new List<int>()));
         }
+
+        [Fact]
+        public void AddBinarySearchTree()
+        {
+            Node n1 = new Node(200);
+            Node n2 = new Node(700);
+            Node n3 = new Node(100);
+
+            BinarySearchTree bt = new BinarySearchTree(n1);
+            bt.Add(n2);
+            bt.Add(n3);
+
+            Assert.Equal(n3.Value, bt.Root.LeftChild.Value);
+        }
+
+        [Fact]
+        public void AddBinarySearchTreeLargestValue()
+        {
+            Node n1 = new Node(200);
+            Node n2 = new Node(700);
+            Node n3 = new Node(900);
+
+            BinarySearchTree bt = new BinarySearchTree(n1);
+            bt.Add(n2);
+            bt.Add(n3);
+
+            Assert.Equal(n3.Value, bt.Root.RightChild.RightChild.Value);
+        }
+
+        [Fact]
+        public void AddBinarySearchTreeSmallestValue()
+        {
+            Node n1 = new Node(200);
+            Node n2 = new Node(100);
+            Node n3 = new Node(25);
+
+            BinarySearchTree bt = new BinarySearchTree(n1);
+            bt.Add(n2);
+            bt.Add(n3);
+
+            Assert.Equal(n3.Value, bt.Root.LeftChild.LeftChild.Value);
+        }
+
+        [Theory]
+        [InlineData(15)]
+        [InlineData(-541)]
+        [InlineData(900)]
+        public void SearchBinarySearchTree(int test)
+        {
+            Node n1 = new Node(25);
+            Node n2 = new Node(700);
+            Node n3 = new Node(test);
+
+            BinarySearchTree bt = new BinarySearchTree(n1);
+            bt.Add(n2);
+            bt.Add(n3);
+
+            Assert.Equal(n3, bt.Search(n3));
+        }
     }
 }
