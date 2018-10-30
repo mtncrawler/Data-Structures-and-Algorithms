@@ -44,5 +44,24 @@ namespace treesTest
 
             Assert.Equal(expected, bt.InOrder(n1, new List<int>()));
         }
+
+        [Theory]
+        [InlineData(100)]
+        [InlineData(-541)]
+        [InlineData(0.65)]
+        public void PostOrderBinaryTree(int test)
+        {
+            Node n1 = new Node(test);
+            Node n2 = new Node(700);
+            Node n3 = new Node(25);
+
+            BinaryTree bt = new BinaryTree(n1);
+            n1.LeftChild = n2;
+            n1.RightChild = n3;
+
+            List<int> expected = new List<int> { 700, 25, test };
+
+            Assert.Equal(expected, bt.PostOrder(n1, new List<int>()));
+        }
     }
 }
