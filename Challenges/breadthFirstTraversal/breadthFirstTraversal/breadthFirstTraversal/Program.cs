@@ -22,7 +22,6 @@ namespace breadthFirstTraversal
             n1.RightChild.RightChild = n5;
 
             BreadthFirst(n1);
-
         }
 
         public static void BreadthFirst(Node root)
