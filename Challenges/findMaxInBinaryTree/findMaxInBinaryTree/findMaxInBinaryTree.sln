@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findMaxInBinaryTree", "findMaxInBinaryTree\findMaxInBinaryTree.csproj", "{D308864E-6D91-45AA-9E4A-1792E1AE684B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findMaxInBinaryTreeTest", "findMaxInBinaryTreeTest\findMaxInBinaryTreeTest.csproj", "{4DB82FF3-0295-426B-B616-8298B71C57D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D308864E-6D91-45AA-9E4A-1792E1AE684B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D308864E-6D91-45AA-9E4A-1792E1AE684B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D308864E-6D91-45AA-9E4A-1792E1AE684B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB82FF3-0295-426B-B616-8298B71C57D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB82FF3-0295-426B-B616-8298B71C57D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB82FF3-0295-426B-B616-8298B71C57D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB82FF3-0295-426B-B616-8298B71C57D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
