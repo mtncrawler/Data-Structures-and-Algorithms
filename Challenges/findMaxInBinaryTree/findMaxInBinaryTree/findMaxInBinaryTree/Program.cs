@@ -4,7 +4,7 @@ using trees.classes;
 
 namespace findMaxInBinaryTree
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -30,7 +30,7 @@ namespace findMaxInBinaryTree
         {
             List<int> output = new List<int>();
             List<int> values = bt.InOrder(bt.Root, output);
-            int temp = 0;
+            int temp = bt.Root.Value;
 
             foreach (var item in values)
             {

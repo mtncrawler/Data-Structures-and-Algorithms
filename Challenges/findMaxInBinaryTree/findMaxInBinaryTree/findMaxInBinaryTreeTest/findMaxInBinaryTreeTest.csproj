@@ -16,4 +16,10 @@
     <ProjectReference Include="..\findMaxInBinaryTree\findMaxInBinaryTree.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="trees">
+      <HintPath>..\..\..\..\Data-Structures\trees\trees\trees\bin\Debug\netcoreapp2.1\trees.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
