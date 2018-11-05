@@ -1,4 +1,5 @@
 ﻿using System;
+using trees.classes;
 
 namespace findMaxInBinaryTree
 {
@@ -7,6 +8,11 @@ namespace findMaxInBinaryTree
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+        }
+
+        public static void FindMaxValue(Node root)
+        {
+
         }
     }
 }
