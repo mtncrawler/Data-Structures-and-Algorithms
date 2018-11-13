@@ -15,7 +15,7 @@ namespace hashTables
 
             ht.Add("doggo", "Kodiak");
 
-            Console.WriteLine(ht.Find("doggo"));
+            Console.WriteLine(ht.Contains("doggo"));
 
         }
     }

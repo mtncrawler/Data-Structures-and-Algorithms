@@ -37,9 +37,34 @@ namespace hashTables.Classes
 
         public object Find(string key)
         {
-            return Table[GetHash(key)].Value;
+            int idx = GetHash(key);
+
+            if (Table[idx].Key == key) return Table[idx].Value;
+            else
+            {
+                while (Table[idx].Next != null)
+                {
+                    if (Table[idx].Key == key) return Table[idx].Value;
+                }
+            }
+
+            return "Not found.";
         }
 
+        public bool Contains(string key)
+        {
+            int idx = GetHash(key);
 
+            if (Table[idx].Key == key) return true;
+            else
+            {
+                while (Table[idx].Next != null)
+                {
+                    if (Table[idx].Key == key) return true;
+                }
+            }
+            
+            return false;
+        }
     }
 }
