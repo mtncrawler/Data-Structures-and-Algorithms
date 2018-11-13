@@ -31,3 +31,6 @@
 14. [Challenge: Breadth First Traversal](Challenges/breadthFirstTraversal)
 
 15. [Find Max Value in Binary Tree](Challenges/findMaxInBinaryTree)
+
+16. [Implementation: Hash Tables](Challenges/hashTables)
+
