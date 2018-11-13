@@ -15,7 +15,7 @@ namespace hashTables
 
             ht.Add("doggo", "Kodiak");
 
-            Console.WriteLine(ht.Table[ht.GetHash("doggo")].Value);
+            Console.WriteLine(ht.Find("doggo"));
 
         }
     }

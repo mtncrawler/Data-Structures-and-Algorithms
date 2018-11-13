@@ -15,10 +15,23 @@ namespace hashTableTest
             HashTable ht = new HashTable();
             ht.Table = new Node[1024];
             ht.Size = 1024;
-
             ht.Add(key, value);
 
             Assert.Equal(value, ht.Table[ht.GetHash(key)].Value);
+        }
+
+        [Theory]
+        [InlineData("doggie", 200)]
+        [InlineData("Happies", true)]
+        [InlineData("cats?", "Sandwich")]
+        public void FindValueFromKeyInHashTable(string key, object value)
+        {
+            HashTable ht = new HashTable();
+            ht.Table = new Node[1024];
+            ht.Size = 1024;
+            ht.Add(key, value);
+
+            Assert.Equal(value, ht.Find(key));
         }
     }
 }

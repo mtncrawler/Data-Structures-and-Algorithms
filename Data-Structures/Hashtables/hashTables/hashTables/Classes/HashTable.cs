@@ -10,6 +10,18 @@ namespace hashTables.Classes
 
         public int Size { get; set; }
 
+        public int GetHash(string key)
+        {
+            decimal hashValue = 0;
+
+            for (int i = 0; i < key.Length; i++)
+            {
+                hashValue += key[i];
+            }
+
+            return (int)Math.Ceiling(hashValue * 599 / Size);
+        }
+
         public void Add(string key, object value)
         {
             int idx = GetHash(key);
@@ -23,16 +35,11 @@ namespace hashTables.Classes
             }
         }
 
-        public int GetHash(string key)
+        public object Find(string key)
         {
-            decimal hashValue = 0;
-
-            for (int i = 0; i < key.Length; i++)
-            {
-                hashValue += key[i];
-            }
-
-            return (int)Math.Ceiling(hashValue * 599 / Size);
+            return Table[GetHash(key)].Value;
         }
+
+
     }
 }
