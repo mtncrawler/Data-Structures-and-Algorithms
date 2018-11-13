@@ -2,7 +2,7 @@
 
 ## Challenge
 
-Implement a Hashtable with
+Implement a Hashtable with the following methods:
 	- Add(key, value) - void return
 	- Find(string key) - returns the value from key/value pair
 	- Contains(string key) - returns bool
@@ -11,8 +11,3 @@ Implement a Hashtable with
 ## Approach & Efficiency
 
 
-
-## Methods
-
-
- 
