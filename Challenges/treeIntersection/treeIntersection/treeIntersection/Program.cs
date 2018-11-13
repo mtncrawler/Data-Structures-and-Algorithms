@@ -1,4 +1,5 @@
-﻿using System;
+﻿using hashTables.Classes;
+using System;
 using System.Collections.Generic;
 using trees.classes;
 
@@ -15,7 +16,7 @@ namespace treeIntersection
 
         public List<int> TreeIntersection(BinaryTree bt1, BinaryTree bt2)
         {
-
+            HashTable ht = new HashTable();
         }
     }
 }

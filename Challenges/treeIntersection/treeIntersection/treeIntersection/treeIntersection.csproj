@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="hashTables">
+      <HintPath>..\..\..\..\Data-Structures\Hashtables\hashTables\hashTables\bin\Debug\netcoreapp2.1\hashTables.dll</HintPath>
+    </Reference>
     <Reference Include="trees">
       <HintPath>..\..\..\..\Data-Structures\trees\trees\trees\bin\Debug\netcoreapp2.1\trees.dll</HintPath>
     </Reference>
