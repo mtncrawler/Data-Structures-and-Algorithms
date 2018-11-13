@@ -3,12 +3,20 @@ using hashTables.Classes;
 
 namespace hashTables
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            
+
+            HashTable ht = new HashTable();
+            ht.Table = new Node[1024];
+            ht.Size = 1024;
+
+            ht.Add("doggo", "Kodiak");
+
+            Console.WriteLine(ht.Table[ht.GetHash("doggo")].Value);
+
         }
     }
 }

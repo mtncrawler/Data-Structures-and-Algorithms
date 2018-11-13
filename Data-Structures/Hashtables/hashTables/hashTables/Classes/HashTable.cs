@@ -14,12 +14,12 @@ namespace hashTables.Classes
         {
             int idx = GetHash(key);
 
-            if (Table[idx] != null)
+            if (Table[idx] == null)
             {
-                Table[idx] = (Node)value;
+                Table[idx] = new Node(key, value);
             } else
             {
-                Table[idx].Next = (Node)value;
+                Table[idx].Next = new Node(key, value);
             }
         }
 
