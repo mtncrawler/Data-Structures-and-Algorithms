@@ -1,4 +1,5 @@
 ﻿using System;
+using hashTables.Classes;
 
 namespace hashTables
 {
@@ -7,6 +8,7 @@ namespace hashTables
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            
         }
     }
 }
