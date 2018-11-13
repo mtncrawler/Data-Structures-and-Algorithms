@@ -32,5 +32,5 @@
 
 15. [Find Max Value in Binary Tree](Challenges/findMaxInBinaryTree)
 
-16. [Implementation: Hash Tables](Data-Structures/hashTables)
+16. [Implementation: Hash Tables](Data-Structures/HashTables)
 
