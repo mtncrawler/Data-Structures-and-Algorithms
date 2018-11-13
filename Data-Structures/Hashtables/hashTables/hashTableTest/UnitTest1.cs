@@ -47,5 +47,23 @@ namespace hashTableTest
 
             Assert.True(ht.Contains(key));
         }
+
+        [Theory]
+        [InlineData("toto", "Lunch")]
+        [InlineData("binary", "Nerd")]
+        public void Collisions(string key, object value)
+        {
+            HashTable ht = new HashTable();
+            ht.Table = new Node[1024];
+            ht.Size = 1024;
+            Node inline = new Node(key, value);
+            ht.Add(key, value);
+            ht.Add(inline.Key, inline.Value);
+
+            Node n1 = new Node(key, value);
+            n1.Next = inline;
+
+            Assert.Equal(n1.Next.Value, ht.Table[ht.GetHash(key)].Next.Value);
+        }
     }
 }

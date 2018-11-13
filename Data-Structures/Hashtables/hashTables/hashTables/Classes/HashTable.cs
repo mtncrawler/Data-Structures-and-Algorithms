@@ -42,28 +42,28 @@ namespace hashTables.Classes
             if (Table[idx].Key == key) return Table[idx].Value;
             else
             {
-                while (Table[idx].Next != null)
+                Node current = Table[idx];
+                while (current != null)
                 {
                     if (Table[idx].Key == key) return Table[idx].Value;
+                    else current = current.Next;
                 }
             }
 
-            return "Not found.";
+            return null;
         }
 
         public bool Contains(string key)
         {
             int idx = GetHash(key);
-
-            if (Table[idx].Key == key) return true;
-            else
-            {
-                while (Table[idx].Next != null)
-                {
-                    if (Table[idx].Key == key) return true;
-                }
-            }
             
+            Node current = Table[idx];
+            while (current != null)
+            {
+                if (current.Key == key) return true;
+                else current = current.Next;
+            }
+
             return false;
         }
     }
