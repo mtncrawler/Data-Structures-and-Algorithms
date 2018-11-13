@@ -8,18 +8,31 @@ namespace hashTables.Classes
     {
         public Node[] Table { get; set; }
 
-        public 
+        public int Size { get; set; }
+
+        public void Add(string key, object value)
+        {
+            int idx = GetHash(key);
+
+            if (Table[idx] != null)
+            {
+                Table[idx] = (Node)value;
+            } else
+            {
+                Table[idx].Next = (Node)value;
+            }
+        }
 
         public int GetHash(string key)
         {
-            int hashValue = 0;
+            decimal hashValue = 0;
 
             for (int i = 0; i < key.Length; i++)
             {
                 hashValue += key[i];
             }
-            
-            return hashValue % key.Length;
+
+            return (int)Math.Ceiling(hashValue * 599 / Size);
         }
     }
 }
