@@ -5,7 +5,7 @@ The basic idea of a hashtable is the ability to store the key into this data str
 
 ## Challenge
 
-Implement a Hashtable with the following methods:  
+Implement a Hashtable with the following methods:
 	- Add(key, value) - void return
 	- Find(string key) - returns the value from key/value pair
 	- Contains(string key) - returns bool
