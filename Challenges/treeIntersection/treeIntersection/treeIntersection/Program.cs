@@ -64,6 +64,7 @@ namespace treeIntersection
                     output.Add(item);
                 }
             }
+
             return output;
         }
     }
