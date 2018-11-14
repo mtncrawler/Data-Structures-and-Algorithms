@@ -5,7 +5,7 @@ using trees.classes;
 
 namespace treeIntersection
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
