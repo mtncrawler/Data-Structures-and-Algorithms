@@ -41,6 +41,12 @@ namespace treeIntersection
             }
         }
 
+        /// <summary>
+        /// Find matching values in two binary trees
+        /// </summary>
+        /// <param name="bt1">binary tree of ints</param>
+        /// <param name="bt2">binary tree of ints</param>
+        /// <returns>list of integers that are found in both trees</returns>
         public static List<int> TreeIntersection(BinaryTree bt1, BinaryTree bt2)
         {
             HashTable ht = new HashTable();
