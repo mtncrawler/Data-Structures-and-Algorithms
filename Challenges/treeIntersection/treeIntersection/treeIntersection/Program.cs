@@ -9,7 +9,8 @@ namespace treeIntersection
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to Tree Intersection!");
+            Console.WriteLine();
 
             trees.classes.Node n1 = new trees.classes.Node(99);
             trees.classes.Node n2 = new trees.classes.Node(12);
@@ -32,8 +33,12 @@ namespace treeIntersection
             BinaryTree bt1 = new BinaryTree(n1);
             BinaryTree bt2 = new BinaryTree(n5);
 
-            TreeIntersection(bt1, bt2);
+            Console.WriteLine("The trees share these values: ");
 
+            foreach (var item in TreeIntersection(bt1, bt2))
+            {
+                Console.WriteLine(item);
+            }
         }
 
         public static List<int> TreeIntersection(BinaryTree bt1, BinaryTree bt2)
@@ -42,16 +47,24 @@ namespace treeIntersection
             ht.Table = new hashTables.Classes.Node[1024];
             ht.Size = 1024;
 
-            List<int> binaryTree1Output = null;
-            List<int> binaryTree2Output = null;
+            List<int> output = new List<int>();
+            List<int> binaryTreeValues = new List<int>();
 
-            foreach (var item in bt1.InOrder(bt1.Root, binaryTree1Output))
+            foreach (var item in bt1.InOrder(bt1.Root, binaryTreeValues))
             {
-                ht.Add(item.ToString(), item.ToString());
+                ht.Add(item.ToString(), item);
             }
 
+            binaryTreeValues.Clear();
 
-            return;
+            foreach (var item in bt2.InOrder(bt2.Root, binaryTreeValues))
+            {
+                if (ht.Contains(item.ToString()))
+                {
+                    output.Add(item);
+                }
+            }
+            return output;
         }
     }
 }
