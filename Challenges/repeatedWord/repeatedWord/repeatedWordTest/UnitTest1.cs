@@ -1,5 +1,7 @@
 using System;
 using Xunit;
+using repeatedWord;
+using hashTables.Classes;
 
 namespace repeatedWordTest
 {
