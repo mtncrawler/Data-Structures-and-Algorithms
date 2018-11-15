@@ -14,6 +14,11 @@ namespace repeatedWord
             
         }
 
+        /// <summary>
+        /// Return the first repeated word in a long string 
+        /// </summary>
+        /// <param name="input">lengthy string</param>
+        /// <returns>the first returned word or null if no repeated words</returns>
         public static string RepeatedWord(string input)
         {
             HashTable ht = new HashTable();

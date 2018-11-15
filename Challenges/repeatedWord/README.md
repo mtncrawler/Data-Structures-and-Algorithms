@@ -1,11 +1,14 @@
 # First Repeated Word
-<!-- Short summary or background information -->
 
 ## Challenge
 Write a function that accepts a lengthy string parameter and returns the first repeated word. 
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* Time O(n)
+	- the worst case, the entire string input will be need to be traversed to find any matching words  
+
+* Space O(n)
+	- a hash table is used to find the first repeated word  
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![RepeatedWord](../../assets/repeatedWord.png)
