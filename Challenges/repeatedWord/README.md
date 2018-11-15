@@ -2,7 +2,7 @@
 <!-- Short summary or background information -->
 
 ## Challenge
-<!-- Description of the challenge -->
+Write a function that accepts a lengthy string parameter and returns the first repeated word. 
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
