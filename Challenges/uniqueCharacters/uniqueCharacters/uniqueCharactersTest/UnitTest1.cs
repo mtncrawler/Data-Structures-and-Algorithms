@@ -15,5 +15,14 @@ namespace uniqueCharactersTest
         {
             Assert.False(Program.UniqueCharacters(input));
         }
+
+        [Theory]
+        [InlineData("iSaWtHeDog")]
+        [InlineData("qWeRtYuIoPl")]
+        [InlineData("123456789")]
+        public void ValidUniqueness(string input)
+        {
+            Assert.True(Program.UniqueCharacters(input));
+        }
     }
 }
