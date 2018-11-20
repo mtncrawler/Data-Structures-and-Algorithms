@@ -16,6 +16,10 @@ namespace quickSort
         public static void QuickSort(int[] arr, int left, int right)
         {
             int position = Partition(arr, left, right);
+
+            QuickSort(arr, left, position - 1);
+
+            QuickSort(arr, position + 1, right);
         }
 
         public static int Partition(int[] arr, int left, int right)
@@ -25,11 +29,17 @@ namespace quickSort
 
             for (int i = left; i < right; i++)
             {
-                low++;
-                Swap();
+                if (arr[i] <= pivot)
+                {
+                    low++;
+                    Swap(arr, i, low);
+                }
             }
 
-            return 0;
+            Swap(arr, right, low + 1);
+
+            return low + 1;
+
         }
 
         public static void Swap(int[] arr, int i, int low)
