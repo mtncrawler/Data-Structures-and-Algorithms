@@ -6,4 +6,4 @@ The insertion sort method is an algorithm that accepts an array of integers and 
 
 *Time O(n^2) 
 
-*Space O(1) - the sort is done in-place and does not require any additional memory space
+*Space O(1) - the sort is done in-place and does not require any additional memory space 
