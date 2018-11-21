@@ -47,7 +47,25 @@ namespace mergeSort
                     arr[k] = left[i];
                     i++;
                 }
+                else
+                {
+                    arr[k] = right[j];
+                    j++;
+                }
+
+                k++;
             }
+
+            if (i == left.Length)
+            {
+                Array.Copy(right, j, arr, k, right.Length - j);
+            }
+            else
+            {
+                Array.Copy(left, i, arr, k, left.Length - i);
+            }
+
+            return arr;
         }
     }
 }
