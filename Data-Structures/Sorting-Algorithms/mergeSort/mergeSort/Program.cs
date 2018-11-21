@@ -6,7 +6,11 @@ namespace mergeSort
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to Merge Sort!");
+
+            int[] arr = { 2, 6, 99, 12, -76, 34, 100, 1 };
+
+
 
         }
 
@@ -17,15 +21,16 @@ namespace mergeSort
                 int leftSize = myarr.Length / 2;
                 int rightSize = myarr.Length / 2;
 
+                //first half goes in left arr
                 int[] left = new int[leftSize];
                 Array.Copy(myarr, 0, left, 0, leftSize);
 
+                //second half goes in right arr
                 int[] right = new int[rightSize];
                 Array.Copy(myarr, myarr.Length / 2, right, 0, rightSize);
 
                 MergeSort(left);
                 MergeSort(right);
-
                 Merge(left, right, myarr);
             }
 
