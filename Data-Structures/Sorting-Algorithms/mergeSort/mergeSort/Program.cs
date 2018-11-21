@@ -26,6 +26,17 @@ namespace mergeSort
                 MergeSort(left);
                 MergeSort(right);
 
+                Merge(left, right, myarr);
             }
+
+        }
+
+        static int[] Merge(int[] left, int[] right, int[] arr)
+        {
+            int i = 0;
+            int j = 0;
+            int k = 0;
+
+
         }
 }
