@@ -12,7 +12,7 @@ namespace mergeSort
 
         static void MergeSort(int[] myarr)
         {
-            if (myarr.Length > 1 )
+            if (myarr.Length > 1)
             {
                 int leftSize = myarr.Length / 2;
                 int rightSize = myarr.Length / 2;
@@ -33,10 +33,21 @@ namespace mergeSort
 
         static int[] Merge(int[] left, int[] right, int[] arr)
         {
+            //left pointer
             int i = 0;
+            //right pointer
             int j = 0;
+            //end arr pointer
             int k = 0;
 
-
+            while (i < left.Length && j < right.Length)
+            {
+                if (left[i] <= right[j])
+                {
+                    arr[k] = left[i];
+                    i++;
+                }
+            }
         }
+    }
 }
