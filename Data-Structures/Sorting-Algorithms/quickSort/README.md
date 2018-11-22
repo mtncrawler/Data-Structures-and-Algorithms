@@ -1,9 +1,8 @@
 ### Implementation: Quick Sort
-
+Create a method that uses a quick sort to sort an array of integers. 
   
+## Time & Space Complexity 
 
-## Complexity 
+*Time O(n^2) 
 
-*Time O() 
-
-*Space O()
+*Space O(h)
