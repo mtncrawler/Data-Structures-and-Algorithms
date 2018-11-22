@@ -34,3 +34,13 @@
 
 16. [Implementation: Hash Tables](Data-Structures/Hashtables)
 
+17. [Unique Characters](Challenges/uniqueCharacters)
+
+18. [Tree Intersection](Challenges/treeIntersection)
+
+19. [Implementation: Insertion Sort](Data-Structures/Sorting-Algorithms/insertionSort)
+
+20. [Implentation: Merge Sort](Data-Structures/Sorting-Algorithms/mergeSort)
+
+21. [Implementation: Quick Sort](Data-Structures/Sorting-Algorithms/quickSort)
+
