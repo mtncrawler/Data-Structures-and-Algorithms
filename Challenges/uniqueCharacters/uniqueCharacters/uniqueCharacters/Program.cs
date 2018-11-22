@@ -8,6 +8,7 @@ namespace uniqueCharacters
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Unique Characters!");
+            Console.WriteLine();
 
             string input = "letsgohome";
 
