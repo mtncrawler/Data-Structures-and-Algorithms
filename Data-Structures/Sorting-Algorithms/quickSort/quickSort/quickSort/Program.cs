@@ -7,13 +7,20 @@ namespace quickSort
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Quick Sort!");
+            Console.WriteLine();
 
+            Console.WriteLine("Your current array: ");
             int[] myArr = { 76, 7, 1, 65, 99 };
 
-            QuickSort(myArr, 0, myArr.Length-1);
+            Console.WriteLine(String.Join(", ", myArr));
+            Console.WriteLine();
+
+            Console.WriteLine("Your quick sorted array: ");
+            int[] output = QuickSort(myArr, 0, myArr.Length-1);
+            Console.WriteLine(String.Join(", ", output));
         }
 
-        public static void QuickSort(int[] arr, int left, int right)
+        public static int[] QuickSort(int[] arr, int left, int right)
         {
             if (left < right)
             {
@@ -23,6 +30,7 @@ namespace quickSort
 
                 QuickSort(arr, position + 1, right);         
             }
+            return arr;
         }
 
         public static int Partition(int[] arr, int left, int right)
