@@ -1,9 +1,9 @@
 ### Implementation: Merge Sort
 
-The insertion sort method is an algorithm that accepts an array of integers and returns it with all integers in order from lowest to highest in value. It is a stable algorithm, or it does not change the order of elements with equal value.  
+The merge sort method is an algorithm that accepts an array of integers and returns it with all integers in order from lowest to highest in value by halfing the array recursively until each array is of one element. Then the elements are compared and built back up. It is a stable "divide and conquer" algorithm.
 
 ## Complexity 
 
-*Time O(n^2) 
+*Time O(n log n) 
 
-*Space O(1) - the sort is done in-place and does not require any additional memory space 
+*Space O(n)
