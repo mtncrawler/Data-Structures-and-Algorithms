@@ -7,14 +7,27 @@ namespace mergeSort
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Merge Sort!");
+            Console.WriteLine();
 
+            Console.WriteLine("Your current array: ");
             int[] arr = { 2, 6, 99, 12, -76, 34, 100, 1 };
+            foreach (var item in arr)
+	        {
+                Console.WriteLine(item);
+	        }
 
+            int[] sorted = MergeSort(arr);
+
+            Console.WriteLine("Your merge sorted array: ");
+            foreach (var item in sorted)
+	        {
+                Console.WriteLine(item);
+	        }
 
 
         }
 
-        static void MergeSort(int[] myarr)
+        static int[] MergeSort(int[] myarr)
         {
             if (myarr.Length > 1)
             {
@@ -33,7 +46,7 @@ namespace mergeSort
                 MergeSort(right);
                 Merge(left, right, myarr);
             }
-
+            return myarr;
         }
 
         static int[] Merge(int[] left, int[] right, int[] arr)
