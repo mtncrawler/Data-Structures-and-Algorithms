@@ -13,7 +13,7 @@ namespace graph
         /// Create graph with given number of vertices
         /// </summary>
         /// <param name="vertices">number of vertices in graph</param>
-        public Graph(int vertices)
+        public Graph(int vertices, Tuple<LinkedListNode<object>, int> vertex)
         {
             AdjacencyList = new LinkedList<Tuple<LinkedListNode<object>, int>>[vertices];
 
@@ -21,7 +21,8 @@ namespace graph
             {
                 AdjacencyList[i] = new LinkedList<Tuple<LinkedListNode<object>, int>>();
             }
-        
+
+            AdjacencyList[0].AddFirst(vertex);
         }
 
         /// <summary>
@@ -50,7 +51,10 @@ namespace graph
 
             for (int i = 0; i < AdjacencyList.Length; i++)
             {
-                output.Add(AdjacencyList[i].First());
+                if (AdjacencyList[i].Count >= 1)
+                {
+                    output.Add(AdjacencyList[i].First());
+                }
             }
 
             return output;
