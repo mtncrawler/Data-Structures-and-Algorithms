@@ -56,12 +56,29 @@ namespace graph
             return output;
         }
 
-
+        /// <summary>
+        /// Return a list of all neighbor vertices
+        /// </summary>
+        /// <param name="target">vertex to find all neighbors</param>
+        /// <returns>list of neighbor vertices</returns>
         public List<Tuple<LinkedListNode<object>, int>> GetNeighbors(Tuple<LinkedListNode<object>, int> target)
         {
+            int index = Array.IndexOf(AdjacencyList, target);
 
+            List<Tuple<LinkedListNode<object>, int>> output = new List<Tuple<LinkedListNode<object>, int>>();
+
+            foreach (var item in AdjacencyList[index])
+            {
+                output.Add(item);
+            }
+
+            return output;
         }
 
+        /// <summary>
+        /// Find the size of the graph
+        /// </summary>
+        /// <returns>number of vertices</returns>
         public int Size()
         {
             return AdjacencyList.Count();
