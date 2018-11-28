@@ -10,10 +10,12 @@ namespace graph
         public LinkedList<Tuple<LinkedListNode<object>, int>>[] AdjacencyList { get; set; }
 
         /// <summary>
-        /// Create graph with given number of vertices
+        /// Constructor for graph
         /// </summary>
-        /// <param name="vertices">number of vertices in graph</param>
-        public Graph(int vertices, Tuple<LinkedListNode<object>, int> vertex)
+        /// <param name="vertices">number of vertices</param>
+        /// <param name="vertex">new vertex Node</param>
+        /// <param name="weight">new vertex weight</param>
+        public Graph(int vertices, LinkedListNode<object> vertex, int weight)
         {
             AdjacencyList = new LinkedList<Tuple<LinkedListNode<object>, int>>[vertices];
 
@@ -22,7 +24,7 @@ namespace graph
                 AdjacencyList[i] = new LinkedList<Tuple<LinkedListNode<object>, int>>();
             }
 
-            AdjacencyList[0].AddFirst(vertex);
+            AdjacencyList[0].AddFirst(new Tuple<LinkedListNode<object>, int>(vertex, weight));
         }
 
         /// <summary>
@@ -30,13 +32,22 @@ namespace graph
         /// </summary>
         /// <param name="parent">parent vertex</param>
         /// <param name="child">child vertex</param>
-        public void AddEdge(Tuple<LinkedListNode<object>, int> parent, Tuple<LinkedListNode<object>, int> child)
+        public void AddEdge(LinkedListNode<object> parent, LinkedListNode<object> child, int weight)
         {
             foreach (var item in AdjacencyList)
             {
-                if (item.First.Value == parent)
+                if (item.Count >= 1 && item.First().Item1.Value == parent.Value)
                 {
-                    item.AddLast(child);
+                    item.AddLast(new Tuple<LinkedListNode<object>, int>(child, weight));
+                }
+            }
+
+            for (int i = 0; i < AdjacencyList.Length; i++)
+            {
+                if (AdjacencyList[i].Count == 0)
+                {
+                    AdjacencyList[i].AddFirst(new Tuple<LinkedListNode<object>, int>(child, weight));
+                    break;
                 }
             }
         }
@@ -65,15 +76,20 @@ namespace graph
         /// </summary>
         /// <param name="target">vertex to find all neighbors</param>
         /// <returns>list of neighbor vertices</returns>
-        public List<Tuple<LinkedListNode<object>, int>> GetNeighbors(Tuple<LinkedListNode<object>, int> target)
+        public List<Tuple<LinkedListNode<object>, int>> GetNeighbors(LinkedListNode<object> target, int weight)
         {
-            int index = Array.IndexOf(AdjacencyList, target);
-
             List<Tuple<LinkedListNode<object>, int>> output = new List<Tuple<LinkedListNode<object>, int>>();
 
-            foreach (var item in AdjacencyList[index])
+            for (int i = 0; i < AdjacencyList.Length; i++)
             {
-                output.Add(item);
+                if (AdjacencyList[i].Count >= 1 && AdjacencyList[i].First().Item1.Value == target.Value)
+                {
+                    foreach (var item in AdjacencyList[i])
+                    {
+                        output.Add(item);
+                    }
+                    break;
+                }
             }
 
             return output;
