@@ -19,12 +19,14 @@ namespace graph
 
             g1.AddEdge(v1, v2, 2);
             Console.WriteLine("I added a Node!");
+            Console.WriteLine();
 
             Console.WriteLine("Return all Nodes: ");
             foreach (var item in g1.GetNodes())
             {
                 Console.WriteLine($"{item.Item1.Value}, Weight = {item.Item2}");
             }
+            Console.WriteLine();
 
             Console.WriteLine("Get neighbor Nodes: ");
             foreach (var item in g1.GetNeighbors(v1, 5))
