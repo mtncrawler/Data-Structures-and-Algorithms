@@ -6,8 +6,8 @@ If the array length is odd then round up for the middle index. Return the new ar
 
 ## Approach & Efficiency
 
-1.	Big-O Time = O(n) 
-	Big-O Space = O(n)
+	- Big-O Time = O(n)  
+	- Big-O Space = O(n)  
 The Big-O for time and space is O(n) because the algorithm only needs to run n times and the arrays are a fixed length. 
 
 ## Solution
