@@ -23,7 +23,7 @@ namespace binarySearch
 
             while( min <= max)
             {
-                int middle = min + max;
+                int middle = (min + max)/2;
                 if (target == input[middle])
                 {
                     return middle;
